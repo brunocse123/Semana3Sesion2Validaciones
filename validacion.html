@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <input
+        name="firshtname"
+        value="Bruno"
+        type="text"
+        placeholder="Ingrese el nombre"
+        required
+        minlength="5"
+        maxlength="12"
+        readonly
+      /><br /><br />
+      <!-- -->
+      <input
+        name="lastname"
+        type="text"
+        placeholder="Ingrese el apellido"
+        pattern="[A-Za-z]+"
+        required
+      /><br /><br />
+      <input
+        name="age"
+        type="number"
+        placeholder="Ingrese la edad"
+        required
+        pattern="[0-9]+"
+      /><br /><br />
+      <input
+        name="email"
+        type="email"
+        placeholder="Email"
+        required
+      /><br /><br />
+      <textarea
+        name="description"
+        name=""
+        id=""
+        cols="30"
+        rows="10"
+        pattern="[A-Za-z]+"
+      ></textarea
+      ><br /><br />
+      <button>Enviar</button>
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>
