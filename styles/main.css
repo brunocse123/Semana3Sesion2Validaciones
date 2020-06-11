@@ -1,16 +1,53 @@
+body {
+  padding: 10px;
+  
+}
+
+form{
+    border: 1px sold green;
+
+}
+
 table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-    border: 1px solid var(--theme-color)
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid var(--theme-color);
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+
+
+input {
+  padding: 10px;
+  transition: all 0.3s ease;
+  border: 1px soled #cdcdcd;
+}
+
+input:disabled,
+input:read-only {
+    background: #cdcdcd;
   }
-  
-  td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }
+
+input:invalid:focus {
+    border-color: red;
+}
+
+input:valid{
+    border-color: green;
+}
+
+
+button{
+    cursor: pointer;
+}
