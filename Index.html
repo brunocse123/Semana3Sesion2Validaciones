@@ -14,130 +14,15 @@
     <title>Document</title>
   </head>
   <body>
-    <a href="/AtributosBasicos.html">Atributos Basicos</a>
+    <a href="/AtributosBasicos.html">1. Atributos Basicos</a>
     <br><br>
-    <a href="/ExpresioneRegulares.html">Expresiones Regulares</a>
+    <a href="/ExpresioneRegulares.html">2. Expresiones Regulares</a>
     <br><br>
-    <a href="/validacion.html">Validaciones</a>
-
-    <br><br>
-    <a href="/ValidarEjemplo.html">Ejemplo</a>
+    <a href="/validacion.html">3. Validaciones</a>
 
     <br><br>
+    <a href="/ValidarEjemplo.html">4. Ejemplo</a>
 
-    <form>
-      <label for="choose">¿Prefieres un plátano o una cereza?</label>
-      <input id="choose" name="i_like" />
-      <button>Enviar</button>
-    </form>
-
-    <form>
-      <label for="choose"
-        >¿Prefieres un plátano o una cereza? (requerido)
-      </label>
-      <input id="choose" name="i_like" required />
-      <button>Enviar</button>
-    </form>
-
-    <form>
-        <div>
-          <label for="choose">¿Prefieres un plátano o una cereza?</label>
-          <input type="text" id="choose" name="i_like" required minlength="6" maxlength="6">
-        </div>
-        <div>
-          <label for="number">¿Cuántos te gustaría comer?</label>
-          <input type="number" id="number" name="amount" value="1" min="1" max="10">
-        </div>
-        <div>
-          <button>Enviar</button>
-        </div>
-      </form>
-
-      <form>
-        <p>
-          <fieldset>
-            <legend>¿Tienes carné de conducir?<abbr title="Este campo es obligatorio" aria-label="required">*</abbr></legend>
-            <!-- Si bien solo se puede seleccionar un botón de opción en un grupo con el mismo nombre,
-                 y, por lo tanto, solo un botón de opción en un grupo con el mismo nombre que tiene marcado el atributo «requerido»
-                 basta para hacer de una selección un requisito --> 
-            <input type="radio" required name="driver" id="r1" value="yes"><label for="r1">Sí</label>
-            <input type="radio" required name="driver" id="r2" value="no"><label for="r2">No</label>
-          </fieldset>
-        </p>
-        <p>
-          <label for="n1">¿Qué edad tienes?</label>
-          <!-- El atributo pattern puede actuar como una alternativa para los navegadores que
-               no implementan el tipo de entrada de número, pero admiten el atributo pattern.
-               Ten en cuenta que los navegadores que admiten el atributo pattern lo harán
-               fallar silenciosamente cuando se use con un campo numérico.
-               Su uso aquí solo actúa como una alternativa -->
-           <input type="number" min="12" max="120" step="1" id="n1" name="age"
-                 pattern="\d+">
-        </p>
-        <p>
-          <label for="t1">¿Cuál es tu fruta favorita?<abbr title="Este campo es obligatorio" aria-label="required">*</abbr></label>
-          <input type="text" id="t1" name="fruit" list="l1" required
-                 pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range ">
-          <datalist id="l1">
-            <option>Plátano</option>
-            <option>Cereza</option>
-            <option>Manzana</option>
-            <option>Fresa</option>
-            <option>Limón</option>
-            <option>Naranja</option>
-           </datalist>
-        </p>
-        <p>
-          <label for="t2">¿Cuál es tu dirección de correo electrónico? </label>
-          <input type="email" id="t2" name="email">
-        </p>
-        <p>
-          <label for="t3">Deja un mensaje</label>
-          <textarea id="t3" name="msg" maxlength="140" rows="5"></textarea>
-        </p>
-        <p>
-          <button>Enviar</button>
-        </p>
-      </form>
+    <br><br>
   </body>
-  <style>
-    input:invalid {
-      border: 2px dashed red;
-    }
-
-    input:invalid:required {
-      background-image: linear-gradient(to right, pink, lightgreen);
-    }
-
-    input:valid {
-      border: 2px solid black;
-    }
-
-    form {
-  font: 1em sans-serif;
-  max-width: 320px;
-}
-
-p > label {
-  display: block;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="number"],
-textarea,
-fieldset {
-  width : 100%;
-  border: 1px solid #333;
-  box-sizing: border-box;
-}
-
-input:invalid {
-  box-shadow: 0 0 5px 1px red;
-}
-
-input:focus:invalid {
-  box-shadow: none;
-}
-  </style>
 </html>
