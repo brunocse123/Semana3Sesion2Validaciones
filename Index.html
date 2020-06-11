@@ -1,11 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" media="screen" href="../Styles/Main.css" />
+
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+
+    <a href="/validacion.html">Ir a Validacions</a>
+    <br><br>
+    <a href="/ExpresioneRegulares.html">Expresiones Regulares</a>
+    <br><br>
+    <table>
+        <thead>
+        <tr>
+        <th>Atributo</th>
+        <th>Valor</th>
+        <th>Puede actuar sobre...</th>
+        <th>Descripción</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>minlength</td>
+        <td><em>número</em></td>
+        <td>Campos de texto</td>
+        <td>Establece la longitud mínima del texto requerida.</td>
+        </tr>
+        <tr>
+        <td>maxlength</td>
+        <td><em>número</em></td>
+        <td>Campos de texto</td>
+        <td>No permite escribir textos superiores a <em>número</em> carácteres.</td>
+        </tr>
+        <tr>
+        <td>min</td>
+        <td><em>número</em></td>
+        <td>Campos numéricos</td>
+        <td>Establece el número mínimo permitido.</td>
+        </tr>
+        <tr>
+        <td></td>
+        <td><em>fecha</em></td>
+        <td>Campos de fecha</td>
+        <td>Establece la fecha mínima permitida.</td>
+        </tr>
+        <tr>
+        <td></td>
+        <td><em>hora</em></td>
+        <td>Campos de hora</td>
+        <td>Establece la hora mínima permitida.</td>
+        </tr>
+        <tr>
+        <td>max</td>
+        <td><em>número</em></td>
+        <td>Campos numéricos</td>
+        <td>Establece el número máximo permitido.</td>
+        </tr>
+        <tr>
+        <td></td>
+        <td><em>fecha</em></td>
+        <td>Campos de fecha</td>
+        <td>Establece la fecha máxima permitida.</td>
+        </tr>
+        <tr>
+        <td></td>
+        <td><em>hora</em></td>
+        <td>Campos de hora</td>
+        <td>Establece la hora máxima permitida.</td>
+        </tr>
+        <tr>
+        <td>step</td>
+        <td><em>número</em></td>
+        <td>Campos numéricos</td>
+        <td>Establece el salto de números permitido. Por defecto, 1.</td>
+        </tr>
+        <tr>
+        <td></td>
+        <td><em>fecha</em></td>
+        <td>Campos de fecha</td>
+        <td>Establece el salto de días permitido. Por defecto, 1.</td>
+        </tr>
+        <tr>
+        <td></td>
+        <td><em>hora</em></td>
+        <td>Campos de hora</td>
+        <td>Establece el salto de segundos permitido. Por defecto, 1.</td>
+        </tr>
+        <tr>
+        <td>required</td>
+        <td></td>
+        <td>Campos en general</td>
+        <td>Campo obligatorio. Se debe rellenar para enviar formulario.</td>
+        </tr>
+        <tr>
+        <td>disabled</td>
+        <td></td>
+        <td>Campos en general</td>
+        <td>Campo desactivado. No se puede modificar. No se envía.</td>
+        </tr>
+        <tr>
+        <td>readonly</td>
+        <td></td>
+        <td>Campos en general</td>
+        <td>Campo de sólo lectura. No se puede modificar. Se envía.</td>
+        </tr>
+        </tbody>
+        </table>
+
+        <br><br><br>
+
+    <form>
+      <label for="choose">¿Prefieres un plátano o una cereza?</label>
+      <input id="choose" name="i_like" />
+      <button>Enviar</button>
+    </form>
+
+    <form>
+      <label for="choose"
+        >¿Prefieres un plátano o una cereza? (requerido)
+      </label>
+      <input id="choose" name="i_like" required />
+      <button>Enviar</button>
+    </form>
+
+    <form>
+        <div>
+          <label for="choose">¿Prefieres un plátano o una cereza?</label>
+          <input type="text" id="choose" name="i_like" required minlength="6" maxlength="6">
+        </div>
+        <div>
+          <label for="number">¿Cuántos te gustaría comer?</label>
+          <input type="number" id="number" name="amount" value="1" min="1" max="10">
+        </div>
+        <div>
+          <button>Enviar</button>
+        </div>
+      </form>
+
+      <form>
+        <p>
+          <fieldset>
+            <legend>¿Tienes carné de conducir?<abbr title="Este campo es obligatorio" aria-label="required">*</abbr></legend>
+            <!-- Si bien solo se puede seleccionar un botón de opción en un grupo con el mismo nombre,
+                 y, por lo tanto, solo un botón de opción en un grupo con el mismo nombre que tiene marcado el atributo «requerido»
+                 basta para hacer de una selección un requisito --> 
+            <input type="radio" required name="driver" id="r1" value="yes"><label for="r1">Sí</label>
+            <input type="radio" required name="driver" id="r2" value="no"><label for="r2">No</label>
+          </fieldset>
+        </p>
+        <p>
+          <label for="n1">¿Qué edad tienes?</label>
+          <!-- El atributo pattern puede actuar como una alternativa para los navegadores que
+               no implementan el tipo de entrada de número, pero admiten el atributo pattern.
+               Ten en cuenta que los navegadores que admiten el atributo pattern lo harán
+               fallar silenciosamente cuando se use con un campo numérico.
+               Su uso aquí solo actúa como una alternativa -->
+           <input type="number" min="12" max="120" step="1" id="n1" name="age"
+                 pattern="\d+">
+        </p>
+        <p>
+          <label for="t1">¿Cuál es tu fruta favorita?<abbr title="Este campo es obligatorio" aria-label="required">*</abbr></label>
+          <input type="text" id="t1" name="fruit" list="l1" required
+                 pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range ">
+          <datalist id="l1">
+            <option>Plátano</option>
+            <option>Cereza</option>
+            <option>Manzana</option>
+            <option>Fresa</option>
+            <option>Limón</option>
+            <option>Naranja</option>
+           </datalist>
+        </p>
+        <p>
+          <label for="t2">¿Cuál es tu dirección de correo electrónico? </label>
+          <input type="email" id="t2" name="email">
+        </p>
+        <p>
+          <label for="t3">Deja un mensaje</label>
+          <textarea id="t3" name="msg" maxlength="140" rows="5"></textarea>
+        </p>
+        <p>
+          <button>Enviar</button>
+        </p>
+      </form>
+  </body>
+  <style>
+    input:invalid {
+      border: 2px dashed red;
+    }
+
+    input:invalid:required {
+      background-image: linear-gradient(to right, pink, lightgreen);
+    }
+
+    input:valid {
+      border: 2px solid black;
+    }
+
+    form {
+  font: 1em sans-serif;
+  max-width: 320px;
+}
+
+p > label {
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea,
+fieldset {
+  width : 100%;
+  border: 1px solid #333;
+  box-sizing: border-box;
+}
+
+input:invalid {
+  box-shadow: 0 0 5px 1px red;
+}
+
+input:focus:invalid {
+  box-shadow: none;
+}
+  </style>
 </html>

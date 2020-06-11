@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen" href="../Styles/Main.css" />
+    <title>Document</title>
+</head>
+<body>
+    <a href="/Index.html">Ir a Index</a><br><br>
+
+    <table>
+        <thead>
+        <tr>
+        <th>Expresión regular</th>
+        <th>Carácter especial</th>
+        <th>Denominación</th>
+        <th>Descripción</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td><code>.</code></td>
+        <td>Punto</td>
+        <td>Comodín</td>
+        <td>Cualquier carácter (o texto de tamaño 1)</td>
+        </tr>
+        <tr>
+        <td><code>A|B</code></td>
+        <td><em>Pipe</em></td>
+        <td>Opciones lógicas</td>
+        <td>Opciones alternativas (o <code>A</code> o <code>B</code>)</td>
+        </tr>
+        <tr>
+        <td><code>C(A|B)</code></td>
+        <td>Paréntesis</td>
+        <td>Agrupaciones</td>
+        <td>Agrupaciones alternativas (o <code>CA</code> o <code>CB</code>)</td>
+        </tr>
+        <tr>
+        <td><code>[0-9]</code></td>
+        <td>Corchetes</td>
+        <td>Rangos de carácteres</td>
+        <td>Un dígito (del <code>0</code> al <code>9</code>)</td>
+        </tr>
+        <tr>
+        <td><code>[A-Z]</code></td>
+        <td></td>
+        <td></td>
+        <td>Una letra mayúscula de la <code>A</code> a la <code>Z</code></td>
+        </tr>
+        <tr>
+        <td><code>[^A-Z]</code></td>
+        <td><code>^</code> en corchetes</td>
+        <td>Rango de exclusión</td>
+        <td>Una letra que no sea mayúscula de la <code>A</code> a la <code>Z</code></td>
+        </tr>
+        <tr>
+        <td><code>[0-9]*</code></td>
+        <td>Asterisco</td>
+        <td>Cierre o clausura</td>
+        <td>Un dígito repetido 0 ó más veces (vacío incluido)</td>
+        </tr>
+        <tr>
+        <td><code>[0-9]+</code></td>
+        <td>Signo más</td>
+        <td>Cierre positivo</td>
+        <td>Un dígito repetido 1 ó más veces</td>
+        </tr>
+        <tr>
+        <td><code>[0-9]{3}</code></td>
+        <td>Llaves</td>
+        <td>Coincidencia exacta</td>
+        <td>Cifra de 3 dígitos (dígito repetido <code>3</code> veces)</td>
+        </tr>
+        <tr>
+        <td><code>[0-9]{2,4}</code></td>
+        <td></td>
+        <td>Coincidencia (rango)</td>
+        <td>Cifra de 2 a 4 dígitos (rep. de <code>2</code> a <code>4</code> veces)</td>
+        </tr>
+        <tr>
+        <td><code>b?</code></td>
+        <td>Interrogación</td>
+        <td>Carácter opcional</td>
+        <td>El carácter <code>b</code> puede aparecer o puede que no</td>
+        </tr>
+        <tr>
+        <td><code>\.</code></td>
+        <td>Barra invertida</td>
+        <td>Escape</td>
+        <td>El carácter <code>.</code> literalmente (no como comodín)</td>
+        </tr>
+        </tbody>
+        </table>
+</body>
+</html>
